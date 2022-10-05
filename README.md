@@ -7,3 +7,6 @@ The synthax to add a variable is (the example here is the variable called t):
     if split[t] == "t" and split[t + 1] == "_":
 
         formula.append("t")
+
+To calculate the exponential of a number x, put ex
+The same goes for sin, ahtan...
