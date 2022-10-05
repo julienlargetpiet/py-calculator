@@ -474,11 +474,7 @@ t = 0
 
 prc = 0
 
-print(formula)
-
 while len(num_para) > 0:
-
-    print(formula)
 
     t = para + sommus_val
 
