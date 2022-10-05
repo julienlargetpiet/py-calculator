@@ -721,8 +721,6 @@ while len(num_para) > 0:
 
     t = para + sommus_val
 
-    tdeff = para + sommus_val
-
     while formula[t] != ")" and len(num_para) > 0:
 
         if formula[t - 1] == "*" and type(formula[t - 2]) == float and type(formula[t]) == float:
@@ -963,8 +961,6 @@ while t < len(formula):
     t += 1
 
 t = 0
-
-tdeff = para + sommus_val
 
 while t < len(formula):
 
