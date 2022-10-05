@@ -10,3 +10,5 @@ The synthax to add a variable is (the example here is the variable called t):
 
 To calculate the exponential of a number x, put ex
 The same goes for sin, atanh...
+
+(The code is messy feel free to clean it.)
