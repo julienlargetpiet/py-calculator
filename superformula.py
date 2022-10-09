@@ -127,18 +127,13 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
-
 
     if split[t] == "m" and split[t + 1] == "_":
 
@@ -176,18 +171,13 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
-
 
     if split[t] == "v" and split[t + 1] == "_":
 
@@ -225,15 +215,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
@@ -273,15 +259,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
@@ -321,15 +303,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
@@ -369,15 +347,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
@@ -417,15 +391,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
@@ -465,15 +435,11 @@ while t < len(split):
 
             t_plusdinspi = t + 2
 
-            print(t_plusdinspi, split)
-
             while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
 
                 split.pop(t_plusdinspi)
 
-            print(split[t_plusdinspi - 1])
-
-            if str_nb.count(split[t_plusdinspi - 1]):
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
 
                 split.pop(t_plusdinspi)
 
