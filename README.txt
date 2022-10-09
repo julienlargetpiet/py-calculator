@@ -16,6 +16,90 @@ The synthax to add a variable is (the example here is the variable called t):
     if split[t] == "t" and split[t + 1] == "_":
 
         formula.append("t")
+        
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+
+                split.pop(t_plusdinspi)
+
+    if split[t - 1] == "r" and split[t] == "o" and split[t + 1] == "_":
+
+        formula.append("ro")
+
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+
+                split.pop(t_plusdinspi)
 
 To calculate the exponential of a number x, put ex
 The same goes for sin, atanh...
