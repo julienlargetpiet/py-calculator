@@ -8,7 +8,7 @@ import time
 
 import math
 
-a = str(input("What do you want to calculate?"))
+a = str(input("Quelle est la formule?"))
 
 a = " ".join(a)
 
@@ -45,6 +45,8 @@ cro_count = 0
 u2 = 0
 
 index_l = []
+
+t_plusdinspi = 0
 
 while t < len(split):
 
@@ -93,33 +95,387 @@ while t < len(split):
 
         formula.append("C")
 
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
+
+
     if split[t] == "m" and split[t + 1] == "_":
 
         formula.append("m")
+
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
+
 
     if split[t] == "v" and split[t + 1] == "_":
 
         formula.append("v")
 
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
+
     if split[t] == "t" and split[t + 1] == "_":
 
         formula.append("t")
 
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
+
     if split[t - 1] == "p" and split[t] == "H" and split[t + 1] == "_":
 
         formula.append("pH")
+        
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
 
     if split[t - 1] == "r" and split[t] == "o" and split[t + 1] == "_":
 
         formula.append("ro")
 
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
+
     if split[t - 1] == "Q" and split[t] == "r" and split[t + 1] == "_":
 
         formula.append("Qr")
+        
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
 
     if split[t] == "n" and split[t + 1] == "_":
 
         formula.append("n")
+
+        t_plusdinspi = t + 2
+
+        laterriblefin = 0
+
+        passela = 0
+
+        while laterriblefin == 0:   
+
+            if str_nb.count(split[t_plusdinspi]) > 0:
+
+                lajoutstr = split[t_plusdinspi]
+
+                lajoutstr2 = formula[-1]
+
+                lajoutstr3 = lajoutstr2 + lajoutstr
+
+                formula[-1] = lajoutstr3
+
+            if t_plusdinspi + 2 > len(split):
+
+                laterriblefin = 1
+
+            if str_nb.count(split[t_plusdinspi]) == 0:
+
+                laterriblefin = 1
+
+            t_plusdinspi += 1
+
+        if laterriblefin == 1:
+
+            t_plusdinspi = t + 2
+
+            print(t_plusdinspi, split)
+
+            while str_nb.count(split[t_plusdinspi]) > 0 and t_plusdinspi + 1 < len(split):
+
+                split.pop(t_plusdinspi)
+
+            print(split[t_plusdinspi - 1])
+
+            if str_nb.count(split[t_plusdinspi - 1]):
+
+                split.pop(t_plusdinspi)
 
     if split[t] == "(":
 
@@ -478,7 +834,7 @@ while len(num_para) > 0:
 
     t = para + sommus_val
 
-    while formula[t] != ")":
+    while formula[t] != ")":   #teste
 
         t += 1
 
@@ -716,6 +1072,8 @@ while len(num_para) > 0:
         t += 1
 
     t = para + sommus_val
+
+    tdeff = para + sommus_val
 
     while formula[t] != ")" and len(num_para) > 0:
 
@@ -957,6 +1315,8 @@ while t < len(formula):
     t += 1
 
 t = 0
+
+tdeff = para + sommus_val
 
 while t < len(formula):
 
