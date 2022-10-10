@@ -9,7 +9,7 @@ Example: -(45*9+(e3-9)+(12*5-(2**3)+6)+sin6)/(45/9+(e3+9)+(12*5-(2**3)+6)+sin6)*
 You can now add a number to a variable following this example:
 
          -4*m_4+9*0.5 = 4*m4+4.5
-         -(m_2+C_1256)*4 = 4*m2+4*C1256
+         -m_2+C_1256*4 = m2+4*C1256
          -...
 
 If you want to add your variable the line number refering to this function is arround 100.
