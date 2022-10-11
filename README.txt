@@ -4,6 +4,8 @@ You can add a variable to the input ( only known chemistry symbol accepted and m
 
 Example: -(45*9+(e3-9)+(12*5-(2**3)+6)+sin6)/(45/9+(e3+9)+(12*5-(2**3)+6)+sin6)*n_ = 5.17*n
          -lne3 = 3.0
+         -4! = 24
+         -|-6| = 6
          -...
 
 You can now add a number to a variable following this example:
