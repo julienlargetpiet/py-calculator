@@ -8,7 +8,7 @@ import time
 
 import math
 
-a = str(input("Quelle est la formule?"))
+a = str(input("What do you want to calculate ?"))
 
 a = " ".join(a)
 
