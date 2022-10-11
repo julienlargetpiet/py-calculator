@@ -20,7 +20,7 @@ prioridad_l = ["*", "raccord", "*", -1, "exp", "log", "ln", -1, "*", "/", -1, "+
 
 ressources = ["[", "]", "t", "v", "m", "M", "ro", "+", "-", "(", ")", "*", "/", "**", "exp", "ln", "log"]
 
-str_nb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+str_nb = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "0.3"]
 
 formula = []
 
@@ -55,6 +55,18 @@ while t < len(split):
     resultat.append(0)
 
     index_l.append(0)
+
+    if split[t] == "r":
+
+        formula.append("r")
+
+    if split[t] == "|":
+
+        formula.append("|")
+
+    if split[t] == "!":
+
+        formula.append("!")
 
     if split[t] == "e":
 
@@ -95,6 +107,8 @@ while t < len(split):
 
         formula.append("C")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -105,13 +119,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -131,14 +147,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t] == "m" and split[t + 1] == "_":
 
         formula.append("m")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -149,13 +171,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -175,14 +199,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t] == "v" and split[t + 1] == "_":
 
         formula.append("v")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -193,13 +223,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -219,14 +251,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t] == "t" and split[t + 1] == "_":
 
         formula.append("t")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -237,13 +275,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -263,14 +303,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t - 1] == "p" and split[t] == "H" and split[t + 1] == "_":
 
         formula.append("pH")
         
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -281,13 +327,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -307,14 +355,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t - 1] == "r" and split[t] == "o" and split[t + 1] == "_":
 
         formula.append("ro")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -325,13 +379,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -351,14 +407,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t - 1] == "Q" and split[t] == "r" and split[t + 1] == "_":
 
         formula.append("Qr")
-        
+       
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -369,13 +431,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -395,14 +459,20 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t] == "n" and split[t + 1] == "_":
 
         formula.append("n")
 
+        split.insert(t + 2, "0.3")
+
         t_plusdinspi = t + 2
 
         laterriblefin = 0
@@ -413,13 +483,15 @@ while t < len(split):
 
             if str_nb.count(split[t_plusdinspi]) > 0:
 
-                lajoutstr = split[t_plusdinspi]
+                if split[t_plusdinspi] != "0.3":
 
-                lajoutstr2 = formula[-1]
+                    lajoutstr = split[t_plusdinspi]
 
-                lajoutstr3 = lajoutstr2 + lajoutstr
+                    lajoutstr2 = formula[-1]
 
-                formula[-1] = lajoutstr3
+                    lajoutstr3 = lajoutstr2 + lajoutstr
+
+                    formula[-1] = lajoutstr3
 
             if t_plusdinspi + 2 > len(split):
 
@@ -439,9 +511,13 @@ while t < len(split):
 
                 split.pop(t_plusdinspi)
 
-            if str_nb.count(split[t_plusdinspi - 1]) or t_plusdinspi + 1 == len(split):
+            if t_plusdinspi + 1 == len(split) or str_nb.count(split[t_plusdinspi]) > 0:
 
-                split.pop(t_plusdinspi)
+                split.pop(t_plusdinspi - 1)
+
+                if str_nb.count(split[t_plusdinspi - 1]) > 0:
+
+                    split.pop(t_plusdinspi - 1)
 
     if split[t] == "(":
 
@@ -796,11 +872,19 @@ t = 0
 
 prc = 0
 
+t_dvr = 0
+
+formula_lf = []
+
+t_fact = 0
+
+facto = 0
+
 while len(num_para) > 0:
 
     t = para + sommus_val
 
-    while formula[t] != ")":   #teste
+    while formula[t] != ")":   
 
         t += 1
 
@@ -855,6 +939,34 @@ while len(num_para) > 0:
     tdeff = para + sommus_val
 
     while formula[t] != ")" and len(num_para) > 0:
+
+        if type(formula[t - 1]) == float and formula[t] == "!":
+
+            formula[t - 1] = int(formula[t - 1])
+
+            formula[t - 1] = math.factorial(formula[t - 1])
+
+            formula[t - 1] = float(formula[t - 1])
+
+            formula.pop(t)
+
+            sommus_l[para + abs(t - tdeff)] = sommus_l[para + abs(t - tdeff)] - 1   
+
+            moved = 1
+
+            t = para + sommus_val
+
+        if formula[t - 1] == "r" and type(formula[t]) == float:
+
+            formula[t - 1] = math.radians(formula[t])
+
+            formula.pop(t)
+
+            sommus_l[para + abs(t - tdeff)] = sommus_l[para + abs(t - tdeff)] - 1   
+
+            moved = 1
+
+            t = para + sommus_val
 
         if formula[t - 1] == "ln" and type(formula[t]) == float:
 
@@ -1107,25 +1219,51 @@ while len(num_para) > 0:
 
         t += 1
 
+    t = para + sommus_val
+
+    while formula[t] != ")" and len(num_para) > 0:
+
+        if formula[t - 2] == "|" and formula[t] == "|" and type(formula[t - 1]) == float:
+            
+            formula[t - 2] = abs(formula[t - 1])
+
+            formula.pop(t - 1)
+
+            formula.pop(t - 1)
+
+            sommus_l[para + abs(tdeff - t)] = sommus_l[para + abs(t - tdeff)] - 2
+
+            moved = 1
+
+            t = para + sommus_val
+
+        t += 1
+
 t = 0
 
 while t < len(formula):
 
-    if type(formula[t]) == float:
+    if formula[t - 1] == "r" and type(formula[t]) == float:
 
-        if 0 + formula[t] < 0:
+        formula[t - 1] = math.radians(formula[t])
 
-            formula.insert(t, "-")
+        formula.pop(t)
 
-            print(formula)
+        t = 0
 
-            formula[t + 1] = abs(formula[t + 1])
+        moved = 0
+       
+    if type(formula[t - 1]) == float and formula[t] == "!":
 
-    t += 1
+        formula[t - 1] = int(formula[t - 1])
 
-t = 0
+        formula[t - 1] = math.factorial(formula[t - 1])
 
-while t < len(formula):
+        formula[t - 1] = float(formula[t - 1])
+
+        formula.pop(t)
+
+        t = 0
 
     if formula[t - 1] == "ln" and type(formula[t]) == float:
 
@@ -1331,6 +1469,22 @@ while t < len(formula):
     if formula[t - 1] == "-" and type(formula[t - 2]) == float and type(formula[t]) == float:
 
         formula[t - 2] = formula[t - 2] - formula[t]
+
+        formula.pop(t - 1)
+
+        formula.pop(t - 1)
+
+        moved = 1
+
+        t = 0
+
+    t += 1
+    
+while t < len(formula):
+
+    if formula[t - 2] == "|" and formula[t] == "|" and type(formula[t - 1]) == float:
+        
+        formula[t - 2] = abs(formula[t - 1])
 
         formula.pop(t - 1)
 
